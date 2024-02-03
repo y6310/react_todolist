@@ -33,10 +33,11 @@ function App() {
   
   return (
     <div>
-      <TodoList todos = {todos} toggleTodo={toggleTodo}/>
-      <input type="text" ref = {todoNameRef}/>
-      <button onClick={handleAddTodo}>タスクを追加</button>
-      <button onClick = {handleClear}>完了したタスクの削除</button>
+      <p class="text-6xl text-center block " >Todo List</p>
+      <input type="text" ref = {todoNameRef} class="text-center border border-solid block "/> 
+      <button className="px-6 py-2 bg-green-300" onClick={handleAddTodo}>タスクを追加</button>
+      <button className="px-6 py-2 bg-green-300" onClick = {handleClear}>完了したタスクの削除</button>
+      <TodoList todos = {todos} toggleTodo={toggleTodo} />
       <div>残りのタスク:{todos.filter((todo) => !todo.completed).length}</div>
     </div>
   )
